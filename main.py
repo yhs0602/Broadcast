@@ -36,7 +36,7 @@ def get_address():
 
 def rec_UDP():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.bind(('0.0.0.0', SMS_RECEIVE_PORT))
+    sock.bind(('', SMS_RECEIVE_PORT))
     while True:
         # UDP commands for listening
         data, addr = sock.recvfrom(1024)
